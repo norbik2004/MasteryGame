@@ -12,10 +12,11 @@ def generate_random_colors() -> List[str]:
     return random_colors
 
 
-def game(tries):
+def game():
+    tries = TRIES
     colors = generate_random_colors()
     print("Welcome to Mastery Game!")
-    print(f'You have {tries} tries to guess randomnly generated colours')
+    print(f'You have {TRIES} tries to guess randomnly generated colours')
     print(f'You can choose from {COLORS}')
     while tries > 0:
         good_colors = check_colours(player_input(), colors)

@@ -1,3 +1,3 @@
 import game
 
-game.game(game.TRIES)
+game.game()
