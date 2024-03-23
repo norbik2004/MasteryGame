@@ -1,7 +1,7 @@
 import random
 from typing import List
 
-COLORS = ['R', 'G', 'B', 'Y', 'O']
+COLORS = ['R', 'G', 'B', 'Y', 'W', 'O']
 TRIES = 10
 
 
@@ -35,6 +35,9 @@ def game(tries):
 
 def player_input() -> List[str]:
     colours_input = input("Enter your colours: MAX 4 characters \n")
+    while len(colours_input) != 4:
+        print("Please enter 4 characters")
+        colours_input = input("Enter your colours: MAX 4 characters \n")
     player_input_list = list(colours_input)
     return player_input_list
 
