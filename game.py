@@ -21,10 +21,7 @@ def game():
     while tries > 0:
         good_colors = check_colours(player_input(), colors)
         tries -= 1
-        print("---------------")
-        print(f'You have {tries} tries, u guessed {good_colors}')
-        print(f'You can choose from {COLORS}')
-        print("---------------")
+        print(f'You have {tries} tries, u guessed {good_colors} You can choose from {COLORS}')
         if good_colors == 4:
             print("You won!")
             break
@@ -46,7 +43,7 @@ def player_input() -> List[str]:
 def check_colours(player_colours_input, random_colors) -> int:
     good = 0
     for i in range(len(player_colours_input)):
-        if player_colours_input[i] == random_colors[i]:
+        if player_colours_input[i].upper() == random_colors[i].upper():
             good += 1
     return good
 
